@@ -85,7 +85,7 @@ let guess: u32 = match guess.trim().parse() {
 ];
 ```
 
----
+. . .
 
 The underscore, `_`, is a catchall value; in this example,
 we're saying we want to match all `Err` values,
@@ -158,7 +158,7 @@ architecture the program is running on?
 (64 bits if you're on a 64-bit architecture and 32 bits if you're on a 32-bit
 architecture)
 
----
+. . .
 
 The variant with 'size' after its integer type (signed or unsigned,
 respectively).
@@ -694,7 +694,7 @@ Statement or expression?
 if … { … } else { … }
 ```
 
----
+. . .
 
 Expression.
 
@@ -1417,7 +1417,7 @@ How do you create slices?
 
 ![](./images/14832e393d9139f7266d12d75253b6000e53a3fa.png)
 
----
+. . .
 
 You create slices using a range within brackets by specifying
 `[starting_index..ending_index]`,
@@ -1841,7 +1841,7 @@ These are structs that look similar to tuples, called **tuple structs**.
 
 What could tuple structs be useful for? (3 use cases)
 
----
+. . .
 
 Tuple structs are useful when:
 
@@ -2738,7 +2738,7 @@ fn value_in_cents(coin: Coin) -> u8 {
 
 See if you can restore the blacked out code using `match`.
 
----
+. . .
 
 First, we list the `match` keyword followed by an expression.
 
@@ -4553,9 +4553,9 @@ let team_name = String::from("Blue");
 let score = scores.get(&team_name).copied().unwrap_or(0);
 ```
 
-Explain the `copied()` method here"
+Explain the `copied()` method here
 
----
+. . .
 
 The get method returns an `Option<&V>`.
 If there's no value for that key in the hash map, get will return `None`.
@@ -4576,9 +4576,9 @@ let team_name = String::from("Blue");
 let score = scores.get(&team_name).copied().unwrap_or(0);
 ```
 
-Explain the `unwrap_or(…)` method here"
+Explain the `unwrap_or(…)` method here
 
----
+. . .
 
 The get method returns an `Option<&V>`.
 If there's no value for that key in the hash map, get will return `None`.
@@ -5607,7 +5607,7 @@ pub fn notify(iteml: &impl Summary, item2: &impl Summary) {
 pub fn notify<T: Summary>(iteml: &T, item2: &T) {
 ```
 
----
+. . .
 
 Using `impl` trait is appropriate if we want this function to allow
 `item1` and `item2` to have different types.
@@ -6887,7 +6887,7 @@ A closure without any arguments that returns a value `T`.
 
 Which 2 parts of the closures syntax are optional?
 
----
+. . .
 
 - The parameters / return types (as long as these are inferrable)
 - Curly brackets
@@ -7394,7 +7394,7 @@ We typically use these doc comments **inside the crate root file**
 What are 2 benefits of using `pub use` to organize
 the structure of your public API?
 
----
+. . .
 
 - Re-export definitions of a dependency in the current crate
     to make that crate's definitions part of your crate's public API.
@@ -7951,7 +7951,7 @@ Say `a` is of type `Rc<T>`, which is more idiomatic?
 
 Why?
 
----
+. . .
 
 `Rc::clone(&a)`
 
@@ -8244,7 +8244,7 @@ fn main() {
 What happens when the main thread of a Rust program completes?
 (In a multithreading scenario)
 
----
+. . .
 
 All spawned threads are shut down, whether or not they have finished running
 
@@ -8392,7 +8392,7 @@ it will travel downstream to the end of the waterway.
 
 What are the 2 parts of a channel?
 
----
+. . .
 
 - Transmitter
 - Receiver
@@ -8424,7 +8424,7 @@ fn main() {
 What does the `mpsc::channel` function return?
 (Type and functionality)
 
----
+. . .
 
 The `mpsc::channel` function returns a **tuple**,
 
@@ -9514,7 +9514,7 @@ match x {
 
 Explain this match condition.
 
----
+. . .
 
 The match condition states that the arm only matches
 if the value of `x` is equal to 4, 5, or 6 **and** if `y` is true.
