@@ -15,7 +15,7 @@
           version = "0.0.0.2";
           src = pkgs.fetchzip {
             url = "${releasesUrl}/download/${version}/macOS-11-anki-panky-${version}.tar.gz";
-            sha256 = "enSD3JbQcoHUHvTpNqxXW9CcCViqZ5QyISX3RuaxoYE=";
+            sha256 = "2wb0TeTT0TcFRd7gpRg4XMrZ7MhTxAb6E8L4b3WmwQI=";
           };
           phases = ["installPhase"];
           installPhase = ''

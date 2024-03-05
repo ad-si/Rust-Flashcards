@@ -4,12 +4,13 @@ help: makefile
 
 
 cards.apkg: cards.md
-	ulimit -n 512 \
-	&& anki-panky $<
+	anki-panky $<
 
 
 cards.pdf: cards.md
 	pandoc \
+		--pdf-engine xelatex \
+		--variable "monofont:Source Code Pro" \
 		--to beamer \
 		--output $@ \
 		$<
