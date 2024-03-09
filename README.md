@@ -1,8 +1,8 @@
 # Rust Flashcards
 
-Over 500 flashcards to learn [Rust] from first principles.
+Over 550 flashcards to learn [Rust] from first principles.
 
-<img alt="Screenshot of Anki showing a Rust flashcard" src="./images/2024-03-05t2132_screenshot.png" width="50%">
+<img alt="Screenshot of Anki showing a Rust flashcard" src="screenshots/2024-03-09t1127_anki.png" width="50%">
 
 <br>
 
