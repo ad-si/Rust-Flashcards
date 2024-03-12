@@ -21,12 +21,11 @@ jobs:
       - name: Check Nix Flake
         run: nix flake check
 
-      - name: Build Anki deck and PDF with Nix
-        run: nix develop --command bash -c 'make cards.apkg cards.pdf'
+      - name: Build Anki deck with Nix
+        run: nix develop --command bash -c 'make cards.apkg'
 
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
             cards.apkg
-            cards.pdf
