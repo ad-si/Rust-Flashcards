@@ -1,0 +1,28 @@
+name: Build Anki deck and upload artifacts
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v26
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Anki deck and PDF with Nix
+        run: nix develop --command bash -c 'make cards.apkg cards.pdf'
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            cards.apkg
+            cards.pdf
