@@ -343,7 +343,7 @@ It's roughly the same speed as `f32` but capable of more precision.
 ```rust
 fn main() {
   let x = 2.0; // f64
-  let y: 32 = 3.0; // f32
+  let y: f32 = 3.0; // f32
 }
 ```
 
@@ -353,8 +353,10 @@ What's the precision degree of `f64`?
 
 . . .
 
-It's double precision (`f32` is single precision and both are represented
-according to the IEEE-754 standard)
+Double precision
+
+`f32` is single precision and both are represented
+according to the [IEEE-754](https://en.wikipedia.org/wiki/IEEE_754) standard.
 
 ---
 
@@ -461,6 +463,7 @@ How can we get the individual values out of a tuple? (2 ways)
 . . .
 
 - Destructuring via pattern matching:
+
     ```rust
     fn main() {
       let tup = (500, 6.4, 1);
@@ -470,6 +473,7 @@ How can we get the individual values out of a tuple? (2 ways)
     ```
 
 - Dot notation with indexes:
+
     ```rust
     fn main() {
       let x: (i32, f64, u8) = (500, 6.4, 1);
@@ -681,7 +685,7 @@ How do we declare a function's type?
 With an arrow:
 
 ```rust
-fn five() -> 132 {
+fn five() -> i32 {
   5
 }
 ```
@@ -1053,6 +1057,7 @@ What is one guarantee that a reference has and a conventional pointer doesn't?
 
 Unlike a pointer, a reference is guaranteed to point to a valid value of a
 particular type for the life of that reference.
+
 ![](./images/88f068410bc39554d0de787627d3af214bafe9c3.png)
 
 ---
@@ -4227,6 +4232,7 @@ What are 2 ways that let us bootstrap a String directly from a literal?
 
 - With the `to_string()` method
 - The `String::from(…)` function:
+
     ```rust
     let data = "Initial contents";
     let s = data.to_string();
@@ -4251,12 +4257,15 @@ Convenient way to concatanate strings?
 You can use:
 
 - The `+` operator to concatenate `String` values:
+
     ```rust
     let s1 = String::from("Hello, ");
     let s2 = String::from("world!");
     let s3 = s1 + &s2; // s1 has been moved here and can no longer be used
     ```
+
 - The `format!` macro:
+
     ```rust
     let s1 = String::from("tic");
     let s2 = String::from("tac");
@@ -7912,7 +7921,7 @@ and the data won't be cleaned up unless there are zero references to it.
 
 ```rust
 enum List {
-  Cons(132, Re<List>),
+  Cons(i32, Re<List>),
   Nil,
 }
 
