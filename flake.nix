@@ -26,7 +26,7 @@
         };
       in
       {
-        devShell = with pkgs; mkShell {
+        devShells.default = with pkgs; mkShell {
           buildInputs = [
             ankiPanky
             pandoc
