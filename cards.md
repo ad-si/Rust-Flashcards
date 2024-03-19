@@ -678,7 +678,7 @@ into a statement, and it will then not return a value.
 
 ---
 
-How do we declare a function's type?
+How do we declare a function's return type?
 
 . . .
 
