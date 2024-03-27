@@ -232,7 +232,7 @@ How do you write a hexadecimal literal?
 
 . . .
 
-`0` and the number seperated by `x`
+`0` and the number separated by `x`
 
 For example:
 
@@ -246,7 +246,7 @@ How can you make decimal literals more readable?
 
 . . .
 
-Using `_` as the thousands seperator.
+Using `_` as the thousands separator.
 
 For example:
 
@@ -260,7 +260,7 @@ How do you make an octal base number literal?
 
 . . .
 
-`0` and the number seperated by an `o`
+`0` and the number separated by an `o`
 
 For example:
 
@@ -274,7 +274,7 @@ How do you write a binary literal?
 
 . . .
 
-`0` and the number seperated by `b`
+`0` and the number separated by `b`
 
 For example:
 
@@ -3056,7 +3056,7 @@ src/lib.rs
 
 ---
 
-What does it mean if if a package contains `src/main.rs` and `src/lib.rs`?
+What does it mean if a package contains `src/main.rs` and `src/lib.rs`?
 
 . . .
 
@@ -7197,7 +7197,7 @@ even if the resulting code runs slower.
 
 ---
 
-What's the deafult opt-level for the dev profile?
+What's the default opt-level for the dev profile?
 
 . . .
 
@@ -7213,7 +7213,7 @@ opt-level = 3
 
 ---
 
-What's the deafult opt-level for the release profile?
+What's the default opt-level for the release profile?
 
 . . .
 
