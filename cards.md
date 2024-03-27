@@ -3250,7 +3250,7 @@ you simply put it in a module.
 
 ---
 
-What is the accessability relationship between parent and child modules?
+What is the accessibility relationship between parent and child modules?
 
 . . .
 
@@ -6898,7 +6898,7 @@ Which 2 parts of the closures syntax are optional?
 
 . . .
 
-- The parameters / return types (as long as these are inferrable)
+- The parameters / return types (as long as these are inferable)
 - Curly brackets
 
 ```rust
@@ -7807,7 +7807,7 @@ This holds for mutable references as well.
 ---
 
 When the `Deref` trait is defined,
-what is the limit to how many times can `Deref` coersion take place?
+what is the limit to how many times can `Deref` coercion take place?
 
 . . .
 
@@ -8780,7 +8780,7 @@ the trait object at runtime.
 ---
 
 Between defining a trait object and defining a struct that uses a generic type
-parameter with trait bounds, what is preferrable?
+parameter with trait bounds, what is preferable?
 
 . . .
 
@@ -9352,7 +9352,7 @@ match (setting_value, new_setting_ value) {
     println!("Can't overwrite an existing customized value");
   }
   _ => {
-    settting_value = new_settine value;
+    setting_value = new_setting_value;
   }
 }
 ```
