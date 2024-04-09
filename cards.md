@@ -988,7 +988,7 @@ We **do not** copy the data on the heap that the pointer refers to.
 ---
 
 ```rust
-let s1 = String:from("Hello");
+let s1 = String::from("Hello");
 let s2 = s1;
 
 println!("{}, world!", s1);
@@ -1505,22 +1505,25 @@ If you attempt to create a string slice in the middle of a multi-byte character,
 your program will exit with an error.
 
 ```rust
-fn first_word(s: &String) -> usize {
-  let bytes = s.as_bytes();
-
-  for (i, &item) in bytes.iter().enumerate() {
-    if item == b' ' {
-      return i;
-    }
-  }
-
-  s.len()
-}
+let greeting = "Hello, \u{1F30D}!"; // The globe emoji is a multi-byte character
+let sliced = &greeting[0..9]; // Panics because it's slicing through it
 ```
 
 ---
 
 ```rust
+fn first_word(s: &String) -> &str {
+  let bytes = s.as_bytes();
+
+  for (i, &item) in bytes.iter().enumerate() {
+    if item == b' ' {
+      return &s[0..i];
+    }
+  }
+
+  &s[..]
+}
+
 fn main() {
   let mut s = String::from("Hello world");
   let word = first_word(&s);
@@ -1539,12 +1542,14 @@ Compile-time error!
 
 If we have an immutable reference to something,
 we cannot also take a mutable reference.
-Because clear needs to truncate the `String`,
+
+Because `clear()` needs to truncate the `String`,
 it needs to get a mutable reference.
-The `println!` after the call to clear uses the reference in word,
+The `println!` after the call to `clear()` uses the reference in `word`,
 so the immutable reference must still be active at that point.
-Rust disallows the mutable reference in clear and the immutable
-reference in word from existing at the same time, and compilation fails.
+Rust disallows the mutable reference in `clear()` and the immutable
+reference in `word` from existing at the same time, and compilation fails.
+
 Not only has Rust made our API easier to use,
 but it has also eliminated an entire class of errors at compile time!
 
