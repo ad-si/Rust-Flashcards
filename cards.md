@@ -959,7 +959,7 @@ A String is made up of three parts (shown on the left): \
 This group of data is stored on the stack.
 On the right is the memory on the heap that holds the contents.
 
-![](./images/1be48e7d2e6765b3e337f4d0738ed7b4944d9f70.png)
+![](./images/1be48e7d2e6765b3e337f4d0738ed7b4944d9f70.png){width=50%}
 
 ---
 
@@ -983,7 +983,7 @@ that are on the stack.
 
 We **do not** copy the data on the heap that the pointer refers to.
 
-![](./images/612c87d43da48b3d61bfeb8b21ff9a536d906f18.png)
+![](./images/612c87d43da48b3d61bfeb8b21ff9a536d906f18.png){width=50%}
 
 ---
 
@@ -1007,7 +1007,7 @@ Because Rust invalidates the first variable,
 instead of calling it a shallow copy, it's known as a move.
 So what actually happens is shown here:
 
-![](./images/2ba912cafdb15ec5acfd9a364f8e30f2ae585505.png)
+![](./images/2ba912cafdb15ec5acfd9a364f8e30f2ae585505.png){width=50%}
 
 ---
 
@@ -1414,13 +1414,13 @@ Rather than a reference to the entire `String`,
 `hello` is a reference to a portion of the `String`,
 specified in the extra `[0..5]` bit.
 
-![](./images/21b5d08fbed6e1b0268cc7e578185f829711846d.png)
+![](./images/21b5d08fbed6e1b0268cc7e578185f829711846d.png){width=50%}
 
 ---
 
 How do you create slices?
 
-![](./images/14832e393d9139f7266d12d75253b6000e53a3fa.png)
+![](./images/14832e393d9139f7266d12d75253b6000e53a3fa.png){width=50%}
 
 . . .
 
@@ -7422,7 +7422,7 @@ the structure of your public API?
     as if it were defined in the other location instead.
 
 ![Documentation screenshot](
-    ./images/83883f8e5831c2d68b8986785565f7e12a5389af.png)
+    ./images/83883f8e5831c2d68b8986785565f7e12a5389af.png){width=50%}
 
 ---
 
