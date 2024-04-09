@@ -9,8 +9,11 @@ cards.apkg: cards.md
 
 cards.pdf: cards.md
 	pandoc \
-		--pdf-engine xelatex \
-		--variable "monofont:Source Code Pro" \
+		--pdf-engine tectonic \
+		--variable "geometry:papersize={130mm,130mm}" \
+		--variable "fontsize: 10pt" \
+		--variable "monofont:Hasklug Nerd Font Mono" \
+		--variable "monofontoptions:Scale=0.7, FontFace={weight=700}" \
 		--to beamer \
 		--output $@ \
 		$<
