@@ -3200,7 +3200,7 @@ crate
 
 ---
 
-What are paths for?
+What are paths used for?
 
 . . .
 
@@ -3520,7 +3520,7 @@ What happens here?
 
 Compile-time error!
 
-Note that use only creates the shortcut for the particular scope in which the
+Note that `use` only creates the shortcut for the particular scope in which the
 use occurs.
 
 Since the child module named customer is a different scope than the use
@@ -3550,7 +3550,7 @@ How can we fix the scope related compilation error induced here?
 
 . . .
 
-We can move the use within the customer module too, or reference the shortcut
+We can move the `use` within the customer module, or reference the shortcut
 in the parent module with `super::hosting` within the child customer module.
 
 ---
@@ -5274,7 +5274,8 @@ and confidently use the values they receive.
 ---
 
 How do we define a function named `largest`, that is generic over some type `T`
-and has one parameter `list`, which is a slice of values of type `T`?
+and has one parameter `list`, which is a slice of values of type `T`, and
+returns a reference to `T`?
 
 . . .
 
@@ -6020,13 +6021,13 @@ Output lifetimes
 
 ---
 
-How many lifetime parameters does a function with one parameter
+How many lifetime parameters does a function with one reference parameter
 (and no explicit lifetime annotations) get?
 By which of the lifetime elision rules?
 
 . . .
 
-A function with one parameter gets one lifetime parameter.
+A function with one reference parameter gets one lifetime parameter.
 
 ```rust
 fn foo<'a>(x: &'a i32)
@@ -6077,7 +6078,7 @@ in this function signature.
 ---
 
 What happens according to the lifetime elision rules
-if there are multiple input lifetime parameters,
+if there are multiple reference parameters,
 but one of them is `&self` or `&mut self`?
 
 . . .
@@ -6626,7 +6627,7 @@ outside of `/src`?
 We don't.
 
 Because they are in a different folder to `src`,
-Rust knows to not compile then unless we run `cargo test`.
+Rust knows to not compile them unless we run `cargo test`.
 
 Note: \
 We still want to add the `#[test]` annotation right before
@@ -7688,7 +7689,7 @@ What's the 3 most common use cases for Boxes?
     want to use a value of that type in a context that requires an exact size
 - When you have a large amount of data and you want to transfer ownership but
     **ensure the data won't be copied** when you do so.
-- When you want to own a value and you.
+- When you want to own a value and you
     **care only that it's a type that implements a particular trait**
     rather than being of a specific type.
 
@@ -7829,7 +7830,7 @@ coercion!
 
 ---
 
-How can we benefit from `Deref`, but for muteable references?
+How can we benefit from `Deref`, but for mutable references?
 
 . . .
 
