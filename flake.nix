@@ -20,18 +20,18 @@
       system:
       let
         pkgs = import nixpkgs { inherit system; };
-        version = "0.0.0.3";
+        version = "0.0.0.6";
         releasesUrl = "https://github.com/kamalsacranie/anki-panky/releases";
         src =
           if system == "x86_64-darwin" then
             pkgs.fetchzip {
               url = "${releasesUrl}/download/${version}/macOS-11-anki-panky-${version}.tar.gz";
-              sha256 = "sha256-HJX0C7YKTYzbkCUnww3N2VBRcMNhGvvwBX0YBTnO5Us=";
+              sha256 = "7kkfdx1vndheb63+m2HOLXo0wOYX4iReh9c7Ps/KYQk=";
             }
           else
             pkgs.fetchzip {
               url = "${releasesUrl}/download/${version}/ubuntu-latest-anki-panky-${version}.tar.gz";
-              sha256 = "sha256-0NlgyA/HWVDADj21K17xGqiRx9kIpx/5eOjOgQL6tsA=";
+              sha256 = "k5DQUI2JLVujkV2aZObAPn43m9QZ+aXPJwXpUKDuEDo=";
             };
         ankiPanky = pkgs.stdenv.mkDerivation {
           name = "anki-panky";
