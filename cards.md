@@ -87,9 +87,8 @@ let guess: u32 = match guess.trim().parse() {
 
 . . .
 
-The underscore, `_`, is a catchall value; in this example,
-we're saying we want to match all `Err` values,
-no matter what information they have inside them.
+The underscore `_` means that we don't care about the value that is inside the `Err`.
+It will not be bound to any variable.
 
 ---
 
