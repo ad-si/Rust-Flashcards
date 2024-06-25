@@ -87,7 +87,8 @@ let guess: u32 = match guess.trim().parse() {
 
 . . .
 
-The underscore, `_`, means that we don't care about the value is inside the Err, it will not be binded to any variable.
+The underscore `_` means that we don't care about the value that is inside the `Err`.
+It will not be bound to any variable.
 
 ---
 
