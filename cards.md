@@ -4254,7 +4254,7 @@ let s = String::from("Initial contents");
 
 ---
 
-Convenient way to concatanate strings?
+Convenient way to concatenate strings?
 
 . . .
 
