@@ -397,14 +397,15 @@ and how to define char literals?
 
 . . .
 
-We specify char literals with **single quotes**, as opposed to string literals,
-which use **double quotes**.
+Character literals (`char`) are specified with single quotes (`'`), while string literals (`&str`) use double quotes (`"`)
 
 ```rust
 fn main() {
   let c = 'z';
-  let z: char = 'Z'; // With explicit type annotation
-  let heart_eyed_cat = '\u{1F63B}';
+  let s = "z";
+  // With explicit type annotation
+  let c: char = 'Z'; 
+  let s: &str = "Z";
 }
 ```
 
@@ -4431,6 +4432,7 @@ How can you create a string slice containing particular bytes out of a string?
 . . .
 
 With square brackets and a range.
+
 ```rust
 let hello = "привет";
 let s = &hello[0..4];
@@ -7292,8 +7294,8 @@ Right before the function to document:
 - Use triple backticks <code>```</code> to enclose the doc tests
 - Provide code that demonstrates how to use the function.
     This code serves double purpose:
-    - Illustrates to other humans how to use your code
-    - Is verifiable, and thus acting as a live spec
+  - Illustrates to other humans how to use your code
+  - Is verifiable, and thus acting as a live spec
 
 ```rust
 /// Adds one to the number given.
