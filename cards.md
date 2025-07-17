@@ -397,7 +397,7 @@ and how to define char literals?
 
 . . .
 
-Character literals (`char`) are specified with single quotes ('), while string literals (`&str`) use double quotes (")
+Character literals (`char`) are specified with single quotes (`'`), while string literals (`&str`) use double quotes (`"`)
 
 ```rust
 fn main() {
